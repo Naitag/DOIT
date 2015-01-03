@@ -1,40 +1,44 @@
-function changePattern0(cell,quarter,field,active,nonActive)
+function changePattern0(cell,quarter,userField,active,nonActive)
 {
     return function()
     {
         var isFieldClicked = false;
         for(var i=0;i<4;i++)
         {
-            if(field[cell][i].style.backgroundColor==active)
+            if(userField[cell][i].state=="active")
             {
                 isFieldClicked = true;
             }
         }
         if(isFieldClicked==false)
         {
-            field[cell][quarter].style.backgroundColor = active;
+            userField[cell][quarter].html.style.backgroundColor = active;
+            userField[cell][quarter].state = "active";
         }
         else
         {
-            field[cell][quarter].style.backgroundColor = nonActive;
+            userField[cell][quarter].html.style.backgroundColor = nonActive;
+            userField[cell][quarter].state = "nonActive";
         }
     };
 }
-function changePattern1(cell,quarter,field,active,nonActive)
+function changePattern1(cell,quarter,userField,active,nonActive)
 {
     return function()
     {
-        if(field[cell][quarter].style.backgroundColor == nonActive)
+        if(userField[cell][quarter].state == "nonActive")
         {
-            field[cell][quarter].style.backgroundColor = active;
+            userField[cell][quarter].html.style.backgroundColor = active;
+            userField[cell][quarter].state = "active";
         }
         else
         {
-            field[cell][quarter].style.backgroundColor = nonActive;
+            userField[cell][quarter].html.style.backgroundColor = nonActive;
+            userField[cell][quarter].state = "nonActive";
         }
     };
 }
-function changePattern2(cell,quarter,field,active,nonActive)
+function changePattern2(cell,quarter,userField,active,nonActive)
 {
     return function()
     {

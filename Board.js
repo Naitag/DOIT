@@ -16,17 +16,23 @@ var Board = function(cells ,quarters){
         this.resultField[i] = [];
         for(var j=0;j<this.quarters;j++)
         {
-            this.userField[i][j] = quarterUser[temp];
-            this.resultField[i][j] = quarterResult[temp];
-            this.userField[i][j].style.backgroundColor = this.notActiveColor;
-            this.resultField[i][j].style.backgroundColor = this.notActiveColor;
+            this.userField[i][j] = {
+                html: quarterUser[temp],
+                state: "nonActive"
+            };
+            this.resultField[i][j] = {
+                html: quarterResult[temp],
+                state: "nonActive"
+            };
+            this.userField[i][j].html.style.backgroundColor = this.notActiveColor;
+            this.resultField[i][j].html.style.backgroundColor = this.notActiveColor;
             temp++;
         }
     }
     this.setChangePattern = function(number) {
         for (var i = 0; i < this.cells; i++) {
             for (var j = 0; j < this.quarters; j++) {
-                this.userField[i][j].onclick = this.changePatterns[number](i, j, this.userField, this.activeColor, this.notActiveColor, this.level);
+                this.userField[i][j].html.onclick = this.changePatterns[number](i, j, this.userField,this.activeColor, this.notActiveColor, this.level);
             }
         }
     };
@@ -36,7 +42,8 @@ var Board = function(cells ,quarters){
         {
             if(level.array[i]!=null)
             {
-                this.resultField[i][level.array[i]].style.backgroundColor = this.activeColor;
+                this.resultField[i][level.array[i]].html.style.backgroundColor = this.activeColor;
+                this.resultField[i][level.array[i]].state = "active";
             }
         }
     };
@@ -45,7 +52,7 @@ var Board = function(cells ,quarters){
         var temp = 0;
         for (var i = 0; i < this.cells; i++) {
             for (var j = 0; j < this.quarters; j++) {
-                if(this.userField[i][j].style.backgroundColor == this.resultField[i][j].style.backgroundColor)
+                if(this.userField[i][j].state == this.resultField[i][j].state)
                 {
                     temp++;
                 }
@@ -55,7 +62,7 @@ var Board = function(cells ,quarters){
         {
             for (var i = 0; i < this.cells; i++) {
                 for (var j = 0; j < this.quarters; j++) {
-                    this.userField[i][j].onclick = function(){};
+                    this.userField[i][j].html.onclick = function(){};
                 }
             }
             if(level+1<lvl.length) {

@@ -1,11 +1,11 @@
-function setCookie(cname, cvalue, exdays) {
+function setCookie(cname, cvalue, exdays) { //ustawianie ciasteczka
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
-function getCookie(cname) {
+function getCookie(cname) { //pobieranie ciasteczka
     var name = cname + "=";
     var ca = document.cookie.split(';');
     for(var i=0; i<ca.length; i++) {

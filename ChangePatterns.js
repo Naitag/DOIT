@@ -10,7 +10,7 @@ function changePattern0(cell,quarter,userField,active,nonActive)
                 isFieldClicked = true;
             }
         }
-        if(isFieldClicked==false)
+        if(isFieldClicked===false)
         {
             userField[cell][quarter].html.style.backgroundColor = active;
             userField[cell][quarter].state = "active";

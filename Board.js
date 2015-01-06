@@ -40,13 +40,14 @@ var Board = function(cells ,quarters){
     {
         for(var i=0;i<this.cells;i++)
         {
-            if(level.array[i]!=null)//zabezpienie przed wyjsciem poza tablice
+            if(level.array[i]!==null)//zabezpienie przed wyjsciem poza tablice
             {
                 this.resultField[i][level.array[i]].html.style.backgroundColor = this.activeColor;//przypisanie koloru do html
                 this.resultField[i][level.array[i]].state = "active";//ustawienie stanu
             }
         }
     };
+    /* jshint shadow:true */
     this.check = function(level){//sprawdzanie czy plansze sa takie same
         var quarters = this.cells * this.quarters;
         var temp = 0;
@@ -72,5 +73,5 @@ var Board = function(cells ,quarters){
             alert("win");
             $('<div class="back"><a href="index.php">Wróć</a></div>').appendTo('body');//wyswietlam przycisk wroc
         }
-    }
+    };
 };

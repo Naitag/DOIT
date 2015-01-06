@@ -138,7 +138,7 @@
     </div>
     </div>
 </div>
-<script src="jQuery.min.js"></script>
+<script src="extra/jQuery.min.js"></script>
 <script src="extra.js"></script>
 <script src="Levels.js"></script>
 <script src="Board.js"></script>

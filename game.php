@@ -8,138 +8,151 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <title></title>
 </head>
 <body>
-<div class="grid-container">
-    <div id="user">//plansza uzytkownika
-    <div class="grid-row">
-        <div class="grid-cell">
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
+    <div class="grid-container">
+        <header>
+            <h1>DO IT</h1>
+        </header>
+
+        <div id="user">
+
+            <div class="grid-cell">
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+            </div>
+
+
+            <div class="grid-cell">
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+            </div>
+
+
+            <div class="grid-cell">
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+                <div class="grid-quarter-user"></div>
+            </div>
+
         </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
+        <div id="result">
+
+            <div class="grid-cell">
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+            </div>
+
+
+            <div class="grid-cell">
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+            </div>
+
+
+            <div class="grid-cell">
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+            </div>
+            <div class="grid-cell">
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+                <div class="grid-quarter-result"></div>
+            </div>
+
         </div>
     </div>
-    <div class="grid-row">
-        <div class="grid-cell">
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-        </div>
-    </div>
-    <div class="grid-row">
-        <div class="grid-cell">
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-            <div class="grid-quarter-user"></div>
-        </div>
-    </div>
-    </div>
-    <div id="result">//plansza rezultatu
-    <div class="grid-row">
-        <div class="grid-cell">
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-        </div>
-    </div>
-    <div class="grid-row">
-        <div class="grid-cell">
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-        </div>
-    </div>
-    <div class="grid-row">
-        <div class="grid-cell">
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-        </div>
-        <div class="grid-cell">
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-            <div class="grid-quarter-result"></div>
-        </div>
-    </div>
-    </div>
-</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+    <script src="resp.js"></script>
 <script src="extra/jQuery.min.js"></script>
-<script src="extra.js"></script>
+<script src="extra/extra.js"></script>
 <script src="Levels.js"></script>
 <script src="Board.js"></script>
 <script src="ChangePatterns.js"></script>

@@ -1,0 +1,64 @@
+header{
+  font-size: 50px;
+  text-align: center;
+  margin: 10px 0;
+  h1
+  {
+    margin: 0;
+  }
+}
+.grid-container
+{
+  width: 778px;
+  margin: 0 auto;
+}
+.grid-cell
+{
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 10px;
+}
+.grid-quarter-user
+{
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+.grid-quarter-result
+{
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+#user
+{
+  width: 362px;
+  height: 362px;
+  float: left;
+  border: 1px solid green;
+}
+#result
+{
+  width: 362px;
+  height: 362px;
+  float: left;
+  border: 1px solid red;
+  margin-left: 50px;
+}
+.back
+{
+  font-size: 50px;
+  clear: both;
+  width: 100%;
+  text-align: center;
+}
+li
+{
+  color: red;
+  &:last-child
+  {
+    font-size: 1.5em;
+    color: green;
+  }
+}

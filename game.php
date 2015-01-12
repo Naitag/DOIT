@@ -6,18 +6,16 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="pl">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" type="text/css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <title></title>
 </head>
 <body>
     <div class="grid-container">
         <header>
             <h1>DO IT</h1>
+            <p id="moves">Moves: 0</p>
         </header>
 
         <div id="user">
@@ -145,13 +143,9 @@
 
         </div>
     </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
 
+    <script src="extra/jQuery.js"></script>
     <script src="resp.js"></script>
-<script src="extra/jQuery.min.js"></script>
 <script src="extra/extra.js"></script>
 <script src="Levels.js"></script>
 <script src="Board.js"></script>
@@ -161,7 +155,7 @@
     echo    "<script>
             var board = new Board(9,4);//tworzenie nowej planszy 9 kwadratow podzielonych na 4 czesci
             board.setResultBoard(lvl[$temp]);//ustawiam plansze rezultatu zgodnie z levelem (Levels.js)
-            window.onclick = function(){ return board.check($temp);};//co klikniecie prawdzam czy uzytkownik nie przeszedl poziomy
+            window.onclick = function(){return board.check($temp);};//co klikniecie prawdzam czy uzytkownik nie przeszedl poziomy
             board.setChangePattern(lvl[$temp].changePattern);</script>";//ustawiam schemat zmian planszy uzytkownika zgodnie z levelem
 ?>
 </body>

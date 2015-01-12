@@ -4,9 +4,11 @@ var Board = function(cells ,quarters){
     this.userField = [];
     this.resultField = [];
     this.activeColor = "red"; //kolor aktywnej czesci kwadratu
-    this.notActiveColor = "black";
+    this.nonActiveColor = "black";
     this.level = 0;
-    this.changePatterns = [changePattern0,changePattern1]; //tablica schematow zmian
+    this.moves = 0;
+    this.changePatterns = [this.changePattern0,this.changePattern1]; //tablica schematow zmian
+    self = this;
     var quarterUser = document.getElementsByClassName("grid-quarter-user"); //pobieranie wszystkich czesci kwadratu uzytkownika
     var quarterResult = document.getElementsByClassName("grid-quarter-result");
     var temp = 0; //zmienna do poruszania sie po kolejnych elementac w quarterUser i quarterResult
@@ -18,21 +20,25 @@ var Board = function(cells ,quarters){
         {
             this.userField[i][j] = { //kazda czesc kwadratu ma pole html do manipulowania wygladem i state do manipulowania stanem (aby nie dalo sie zmienic htmla i oszukac gry)
                 html: quarterUser[temp], //przypisanie czesci kwadratu do pola obiektu
-                state: "nonActive"
+                state: "nonActive",
+                cell: i,
+                quarter: j
             };
             this.resultField[i][j] = {
                 html: quarterResult[temp],
-                state: "nonActive"
+                state: "nonActive",
+                cell: i,
+                quarter: j
             };
-            this.userField[i][j].html.style.backgroundColor = this.notActiveColor;
-            this.resultField[i][j].html.style.backgroundColor = this.notActiveColor;
+            this.userField[i][j].html.style.backgroundColor = this.nonActiveColor;
+            this.resultField[i][j].html.style.backgroundColor = this.nonActiveColor;
             temp++;
         }
     }
     this.setChangePattern = function(number) { //ustawienie schematu zmian
         for (var i = 0; i < this.cells; i++) {
             for (var j = 0; j < this.quarters; j++) {//dla kazdej czesci kwadratu ustawiam zdarzenie onclick zalenie od wybranego schematu zmian
-                this.userField[i][j].html.onclick = this.changePatterns[number](i, j, this.userField,this.activeColor, this.notActiveColor, this.level);
+                this.userField[i][j].html.onclick = (this.changePatterns[number]).bind(this.userField[i][j]);
             }
         }
     };

@@ -4,6 +4,9 @@ header {
   margin: 10px 0; }
   header h1 {
     margin: 0; }
+  header p {
+    margin: 5px;
+    font-size: 25px; }
 
 .grid-container {
   width: 778px;

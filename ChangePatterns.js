@@ -1,4 +1,4 @@
-Board.prototype.changePattern0 = function()
+Board.prototype.changePattern0 = function(self)
 {
     var isFieldClicked = false;
     if(self.userField[this.cell][this.quarter].state == "active")
@@ -23,7 +23,7 @@ Board.prototype.changePattern0 = function()
         }
     }
 };
-Board.prototype.changePattern1 = function()
+Board.prototype.changePattern1 = function(self)
 {
         $('#moves').text('Moves: '+ ++self.moves);
         if(self.userField[this.cell][this.quarter].state == "nonActive")

@@ -8,9 +8,9 @@ var Board = function(cells ,quarters){
     this.level = 0;
     this.moves = 0;
     this.changePatterns = [this.changePattern0,this.changePattern1]; //tablica schematow zmian
-    self = this;
-    var quarterUser = document.getElementsByClassName("grid-quarter-user"); //pobieranie wszystkich czesci kwadratu uzytkownika
-    var quarterResult = document.getElementsByClassName("grid-quarter-result");
+    this.self = this;
+    var quarterUser = $(".grid-quarter-user"); //pobieranie wszystkich czesci kwadratu uzytkownika
+    var quarterResult = $(".grid-quarter-result");
     var temp = 0; //zmienna do poruszania sie po kolejnych elementac w quarterUser i quarterResult
     for(var i=0;i<this.cells;i++) //ustawianie tablic plansz
     {
@@ -38,7 +38,7 @@ var Board = function(cells ,quarters){
     this.setChangePattern = function(number) { //ustawienie schematu zmian
         for (var i = 0; i < this.cells; i++) {
             for (var j = 0; j < this.quarters; j++) {//dla kazdej czesci kwadratu ustawiam zdarzenie onclick zalenie od wybranego schematu zmian
-                this.userField[i][j].html.onclick = (this.changePatterns[number]).bind(this.userField[i][j]);
+                this.userField[i][j].html.onclick = $.proxy(this.changePatterns[number],this.userField[i][j],this.self);
             }
         }
     };

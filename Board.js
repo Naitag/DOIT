@@ -52,7 +52,7 @@ var Board = function (cells, quarters) {
         }
     };
     /* jshint shadow:true */
-    this.check = function (level) {//sprawdzanie czy plansze sa takie same
+    this.check = function () {//sprawdzanie czy plansze sa takie same
         var quarters = this.cells * this.quarters;
         var temp = 0;
         for (var i = 0; i < this.cells; i++) {
@@ -71,13 +71,18 @@ var Board = function (cells, quarters) {
                     };//przypisujac pusta funkcje
                 }
             }
-            if (level + 1 < lvl.length && getCookie('level')<level+1) {//sprawdzam czy kolejny level istnieje (czy jest w Levels.js)
-                setCookie("level", level + 1, 365);//ustawiam ciasteczko na kolejny level
+            if (parseInt(level) +1 >= localStorage.getItem('level')) {//sprawdzam czy kolejny level istnieje (czy jest w Levels.js)
+                level++;
+                localStorage.setItem("level", level);//ustawiam ciasteczko na kolejny level
+                if(level<lvl.length)
+                {
+                    nextLevel = true;
+                }
             }
             window.onclick = function () {
             };//kasuje sprawdzanie plansz po kliknieciu
-            alert("win");
-            $('<div class="back"><a href="index.php">Wróć</a></div>').appendTo('body');//wyswietlam przycisk wroc
+
+            $('.back').show();//wyswietlam przycisk wroc
         }
     };
 };

@@ -1,10 +1,14 @@
-$(window).resize(function () {
+$(window).on('resize',function () {
     if ($(window).width() < 790) {
-        $('.grid-container').width('364px');
+        $('.container').width('364px');
         $('#result').css({'margin-left': '0px', 'margin-top': '10px'});
     }
     else {
-        $('.grid-container').width('778px');
+        $('.container').width('778px');
         $('#result').css({'margin-left': '50px', 'margin-top': '0px'});
     }
-});
+    var pop = $('#popup-window');
+    pop.css('top',Math.max(0, (($(window).height() - pop.outerHeight()) / 2) +
+    $(window).scrollTop()) + "px").css('left', Math.max(0, (($(window).width() - pop.outerWidth()) / 2) +
+    $(window).scrollLeft()) + "px");
+}).resize();

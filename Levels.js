@@ -11,7 +11,7 @@ lvl[2] = {
     array: [3, 3, 3, 3, 3, 3, 3, 3, 3],
     changePattern: 2
 };
-lvl[3] = lvl[0]//{
-   // array: [0, 3, 2, 1, 0, 2, 1, 0, 3],
+lvl[3] = {
+    array: [0, 3, 2, 1, 0, 2, 1, 0, 3],
     changePattern: 3
-//};
+};

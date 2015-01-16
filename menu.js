@@ -1,9 +1,6 @@
-var clickedLevel = -1;
-var level = localStorage.getItem('level');
-var nextLevel = false;
 $(document).ready(function(){
     $('#grid-container').hide();
-    $('.back').hide();
+    $('#popup').hide();
     if(level==null)
     {
         localStorage.setItem('level',0);
@@ -13,7 +10,7 @@ $(document).ready(function(){
         for (var i = 0; i < parseInt(level); i++) {
             $('#menu ul').append('<li>Level ' + i + '</li>');
         }
-        $('#menu ul').append('<li>More levels comming soon..</li>');
+        $('#menu ul').append('<li class="soon">More levels comming soon..</li>');
     }
     else {//jesli jest nastepny level
         for (var i = 0; i < parseInt(level) + 1; i++) {
@@ -25,11 +22,8 @@ $(document).ready(function(){
                 clickedLevel = index;
                 createGame();
                 $('#menu').hide();
-                $('#grid-container').show();
+                $('#grid-container').fadeIn('slow');
             });
         });
-
-
-
 });
 

@@ -71,7 +71,7 @@ var Board = function (cells, quarters) {
                     };//przypisujac pusta funkcje
                 }
             }
-            if (parseInt(level) +1 >= localStorage.getItem('level')) {//sprawdzam czy kolejny level istnieje (czy jest w Levels.js)
+            if (parseInt(level) +1 >= localStorage.getItem('level')&&parseInt(level)==clickedLevel) {//sprawdzam czy kolejny level istnieje (czy jest w Levels.js)
                 level++;
                 localStorage.setItem("level", level);//ustawiam ciasteczko na kolejny level
                 if(level<lvl.length)
@@ -82,7 +82,7 @@ var Board = function (cells, quarters) {
             window.onclick = function () {
             };//kasuje sprawdzanie plansz po kliknieciu
 
-            $('.back').show();//wyswietlam przycisk wroc
+            $('#popup').fadeIn('slow');//wyswietlam przycisk wroc
         }
     };
 };

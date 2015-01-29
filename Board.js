@@ -82,7 +82,7 @@ var Board = function (cells, quarters) {
             window.onclick = function () {
             };//kasuje sprawdzanie plansz po kliknieciu
 
-            $('#popup').fadeIn('slow');//wyswietlam przycisk wroc
+            $('.popup').fadeIn('slow');//wyswietlam przycisk wroc
         }
     };
 };

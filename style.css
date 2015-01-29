@@ -82,35 +82,48 @@ header {
       background: #f6f6f6;
       border: none; }
 
-#popup {
+.popup .popup-tutorial {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   position: fixed;
   background-color: rgba(10, 10, 10, 0.5); }
-  #popup #popup-window {
+  .popup .popup-tutorial .popup-window {
     position: absolute;
     background-color: #fff; }
-    #popup #popup-window #back {
+    .popup .popup-tutorial .popup-window #back {
       margin: 10px;
       font-size: 20px;
       padding: 5px;
       cursor: pointer; }
-      #popup #popup-window #back:hover {
+      .popup .popup-tutorial .popup-window #back:hover {
         background-color: #cccdc7; }
-    #popup #popup-window #retry {
+    .popup .popup-tutorial .popup-window #retry {
       margin: 10px;
       font-size: 20px;
       padding: 5px;
       cursor: pointer; }
-      #popup #popup-window #retry:hover {
+      .popup .popup-tutorial .popup-window #retry:hover {
         background-color: #cccdc7; }
-    #popup #popup-window ul {
+    .popup .popup-tutorial .popup-window ul {
       list-style: none;
       margin-left: -40px; }
-    #popup #popup-window li {
+    .popup .popup-tutorial .popup-window li {
       font-size: 15px;
       text-decoration: none; }
+
+#tutorial {
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  clear: both; }
+  #tutorial div {
+    margin: 10px;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer; }
+    #tutorial div:hover {
+      background-color: #cccdc7; }
 
 /*# sourceMappingURL=style.css.map */

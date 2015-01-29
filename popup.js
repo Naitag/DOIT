@@ -17,12 +17,12 @@ $(document).ready(function(){
         else if (lvl.length == parseInt(level)&&!$('#menu ul li:last-child').hasClass('soon')) {
             $('#menu ul').append('<li class="soon">More levels comming soon..</li>');
         }
-        $('#popup').hide();
+        $('.popup').hide();
     });
     $('#retry').click(function(){
         createGame();
         $('#moves').text('Moves: 0');
-        $('#popup').fadeOut('slow');
+        $('.popup').fadeOut('slow');
         if(nextLevel)
         {
             nextLevel = false;

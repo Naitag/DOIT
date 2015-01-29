@@ -103,26 +103,26 @@ header {
   }
 }
 
-#popup{
+.popup .popup-tutorial{
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   position: fixed;
   background-color: rgba(10,10,10,0.5);
-  #popup-window{
+  .popup-window{
     position: absolute;
     background-color: #fff;
 
     #back
     {
-      margin: 10px;
-      font-size: 20px;
-      padding: 5px;
-      cursor: pointer;
-      &:hover{
-        background-color: #cccdc7;
-      }
+        margin: 10px;
+        font-size: 20px;
+        padding: 5px;
+        cursor: pointer;
+        &:hover{
+          background-color: #cccdc7;
+        }
     }
     #retry{
       margin: 10px;
@@ -142,5 +142,21 @@ header {
         text-decoration: none;
       }
 
+  }
+}
+#tutorial
+{
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  clear: both;
+  div{
+    margin: 10px;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover{
+      background-color: #cccdc7;
+    }
   }
 }

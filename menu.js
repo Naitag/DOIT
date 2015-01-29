@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('#grid-container').hide();
-    $('#popup').hide();
+    $('.popup').hide();
     if(level===null)
     {
         localStorage.setItem('level',0);

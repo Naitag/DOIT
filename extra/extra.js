@@ -17,4 +17,7 @@ $(document).ready(function(){
         $('#moves').text('Moves: 0');
         $('#popup').hide();
     });
+    $('#tutorial button').click(function() {
+        $(this).parent().hide();
+    });
 });

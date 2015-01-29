@@ -5,8 +5,9 @@ Board.prototype.changePattern0 = function (self) {
             self.userField[this.cell][this.quarter].html.style.backgroundColor = self.nonActiveColor;
             self.userField[this.cell][this.quarter].state = "nonActive";
         },this));
-        $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel)});
-        $('#moves').text('Moves: ' + ++self.moves);
+        $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel);});
+        self.moves++;
+        $('#moves').text('Moves: ' + self.moves);
         self.check(clickedLevel);
     }
     else {
@@ -20,26 +21,28 @@ Board.prototype.changePattern0 = function (self) {
                 self.userField[this.cell][this.quarter].html.style.backgroundColor = self.activeColor;
                 self.userField[this.cell][this.quarter].state = "active";
             },this));
-            $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel)});
-            $('#moves').text('Moves: ' + ++self.moves);
+            $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel);});
+            self.moves++;
+            $('#moves').text('Moves: ' + self.moves);
         }
     }
 };
 Board.prototype.changePattern1 = function (self) {
-    $('#moves').text('Moves: ' + ++self.moves);
+    self.moves++;
+    $('#moves').text('Moves: ' + self.moves);
     if (self.userField[this.cell][this.quarter].state == "nonActive") {
         $(self.userField[this.cell][this.quarter].html).fadeOut('fast', $.proxy(function() {
         self.userField[this.cell][this.quarter].html.style.backgroundColor = self.activeColor;
         self.userField[this.cell][this.quarter].state = "active";
         },this));
-        $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel)});
+        $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel);});
     }
     else {
         $(self.userField[this.cell][this.quarter].html).fadeOut('fast', $.proxy(function() {
         self.userField[this.cell][this.quarter].html.style.backgroundColor = self.nonActiveColor;
         self.userField[this.cell][this.quarter].state = "nonActive";
         },this));
-        $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel)});
+        $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel);});
     }
 
 };
@@ -52,14 +55,15 @@ Board.prototype.changePattern2 = function (self) {
         }
     if(isFieldClicked===false)
     {
-        $('#moves').text('Moves: ' + ++self.moves);
-        if(this.quarter==0)
+        self.moves++;
+        $('#moves').text('Moves: ' + self.moves);
+        if(this.quarter===0)
         {
             $(self.userField[this.cell][3].html).fadeOut('fast', $.proxy(function() {
             self.userField[this.cell][3].html.style.backgroundColor = self.activeColor;
             self.userField[this.cell][3].state = "active";
             },this));
-            $(self.userField[this.cell][3].html).fadeIn('fast', function(){self.check(clickedLevel)});
+            $(self.userField[this.cell][3].html).fadeIn('fast', function(){self.check(clickedLevel);});
         }
         else if(this.quarter==1)
         {
@@ -67,7 +71,7 @@ Board.prototype.changePattern2 = function (self) {
             self.userField[this.cell][2].html.style.backgroundColor = self.activeColor;
             self.userField[this.cell][2].state = "active";
             },this));
-            $(self.userField[this.cell][2].html).fadeIn('fast', function(){self.check(clickedLevel)});
+            $(self.userField[this.cell][2].html).fadeIn('fast', function(){self.check(clickedLevel);});
         }
         else if(this.quarter==2)
         {
@@ -75,7 +79,7 @@ Board.prototype.changePattern2 = function (self) {
             self.userField[this.cell][1].html.style.backgroundColor = self.activeColor;
             self.userField[this.cell][1].state = "active";
             },this));
-            $(self.userField[this.cell][1].html).fadeIn('fast', function(){self.check(clickedLevel)});
+            $(self.userField[this.cell][1].html).fadeIn('fast', function(){self.check(clickedLevel);});
         }
         else
         {
@@ -83,7 +87,7 @@ Board.prototype.changePattern2 = function (self) {
             self.userField[this.cell][0].html.style.backgroundColor = self.activeColor;
             self.userField[this.cell][0].state = "active";
             },this));
-            $(self.userField[this.cell][0].html).fadeIn('fast', function(){self.check(clickedLevel)});
+            $(self.userField[this.cell][0].html).fadeIn('fast', function(){self.check(clickedLevel);});
         }
     }
     else{
@@ -92,7 +96,7 @@ Board.prototype.changePattern2 = function (self) {
             self.userField[this.cell][this.quarter].html.style.backgroundColor = self.nonActiveColor;
             self.userField[this.cell][this.quarter].state = "nonActive";
             },this));
-            $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel)});
+            $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel);});
         }
     }
 };
@@ -105,22 +109,24 @@ Board.prototype.changePattern3 = function (self) {
     }
     if(isFieldClicked===false)
     {
-        $('#moves').text('Moves: ' + ++self.moves);
+        self.moves++;
+        $('#moves').text('Moves: ' + self.moves);
         $(self.userField[this.cell][(this.quarter+1)%4].html).fadeOut('fast', $.proxy(function() {
         self.userField[this.cell][(this.quarter+1)%4].html.style.backgroundColor = self.activeColor;
         self.userField[this.cell][(this.quarter+1)%4].state = "active";
         },this));
-        $(self.userField[this.cell][(this.quarter+1)%4].html).fadeIn('fast', function(){self.check(clickedLevel)});
+        $(self.userField[this.cell][(this.quarter+1)%4].html).fadeIn('fast', function(){self.check(clickedLevel);});
     }
     else
     {
-        $('#moves').text('Moves: ' + ++self.moves);
+        self.moves++;
+        $('#moves').text('Moves: ' + self.moves);
         if (self.userField[this.cell][this.quarter].state == "active") {
             $(self.userField[this.cell][this.quarter].html).fadeOut('fast', $.proxy(function() {
             self.userField[this.cell][this.quarter].html.style.backgroundColor = self.nonActiveColor;
             self.userField[this.cell][this.quarter].state = "nonActive";
             },this));
-            $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel)});
+            $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel);});
         }
     }
 };
@@ -130,8 +136,9 @@ Board.prototype.changePatternProtorype = function (self) {
             self.userField[this.cell][this.quarter].html.style.backgroundColor = self.activeColor;
             self.userField[this.cell][this.quarter].state = "active";
         },this));
-        $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel)});
-    $('#moves').text('Moves: ' + ++self.moves);
+        $(self.userField[this.cell][this.quarter].html).fadeIn('fast', function(){self.check(clickedLevel);});
+    self.moves++;
+    $('#moves').text('Moves: ' + self.moves);
     //end if
 
 };

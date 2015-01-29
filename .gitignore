@@ -78,5 +78,5 @@ build/Release
 node_modules
 
 
-.sass-cache/
+.sass-cache
 npm-debug.log

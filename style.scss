@@ -39,9 +39,11 @@ header {
   height: 362px;
   float: left;
   border: 1px solid green;
+  display: none;
 }
 
 #result {
+  display: none;
   width: 362px;
   height: 362px;
   float: left;
@@ -50,6 +52,7 @@ header {
 }
 
 .back {
+  display: none;
   font-size: 50px;
   clear: both;
   width: 100%;
@@ -104,6 +107,7 @@ header {
 }
 
 .popup .popup-tutorial{
+  display: none;
   top: 0;
   left: 0;
   width: 100%;

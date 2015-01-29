@@ -14,7 +14,10 @@ header {
   width: 778px;
   margin: 0 auto;
 }
-
+.grid-container
+{
+  display: none;
+}
 .grid-cell {
   width: 100px;
   height: 100px;
@@ -39,11 +42,9 @@ header {
   height: 362px;
   float: left;
   border: 1px solid green;
-  display: none;
 }
 
 #result {
-  display: none;
   width: 362px;
   height: 362px;
   float: left;
@@ -52,7 +53,6 @@ header {
 }
 
 .back {
-  display: none;
   font-size: 50px;
   clear: both;
   width: 100%;
@@ -106,7 +106,7 @@ header {
   }
 }
 
-.popup .popup-tutorial{
+.popup{
   display: none;
   top: 0;
   left: 0;

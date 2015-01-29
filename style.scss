@@ -6,59 +6,78 @@ header {
     margin: 0;
   }
 }
-#moves {
-  margin: 5px;
-  font-size: 25px;
-}
+
 .container {
   width: 778px;
   margin: 0 auto;
 }
-.grid-container
+#grid-container
 {
+
   display: none;
-}
-.grid-cell {
-  width: 100px;
-  height: 100px;
-  float: left;
-  margin: 10px;
+  #moves {
+    margin: 5px;
+    font-size: 25px;
+  }
+  .grid-cell {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+  }
+
+  .grid-quarter-user {
+    float: left;
+    width: 50px;
+    height: 50px;
+  }
+
+  .grid-quarter-result {
+    float: left;
+    width: 50px;
+    height: 50px;
+  }
+
+  #user {
+    width: 362px;
+    height: 362px;
+    float: left;
+    border: 1px solid green;
+  }
+
+  #result {
+    width: 362px;
+    height: 362px;
+    float: left;
+    border: 1px solid red;
+    margin-left: 50px;
+  }
+
+  .back {
+    font-size: 50px;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+  #tutorial
+  {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    clear: both;
+    div{
+      margin: 10px;
+      font-size: 20px;
+      padding: 5px;
+      cursor: pointer;
+      &:hover{
+        background-color: #cccdc7;
+      }
+    }
+  }
 }
 
-.grid-quarter-user {
-  float: left;
-  width: 50px;
-  height: 50px;
-}
-
-.grid-quarter-result {
-  float: left;
-  width: 50px;
-  height: 50px;
-}
-
-#user {
-  width: 362px;
-  height: 362px;
-  float: left;
-  border: 1px solid green;
-}
-
-#result {
-  width: 362px;
-  height: 362px;
-  float: left;
-  border: 1px solid red;
-  margin-left: 50px;
-}
-
-.back {
-  font-size: 50px;
-  clear: both;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-}
 
 
 #menu {
@@ -148,19 +167,4 @@ header {
 
   }
 }
-#tutorial
-{
-  font-size: 20px;
-  padding: 5px;
-  text-align: center;
-  clear: both;
-  div{
-    margin: 10px;
-    font-size: 20px;
-    padding: 5px;
-    cursor: pointer;
-    &:hover{
-      background-color: #cccdc7;
-    }
-  }
-}
+

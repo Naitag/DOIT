@@ -13,4 +13,5 @@ $(document).ready(function(){
         $(window).scrollTop()) + "px").css('left', Math.max(0, (($(window).width() - pop.outerWidth()) / 2) +
         $(window).scrollLeft()) + "px");
     }).resize();
+    $('.popup').css({'top':0});
 });

@@ -7,13 +7,19 @@ var Board = function (cells, quarters) {
     this.nonActiveColor = "black";
     this.level = 0;
     this.moves = 0;
-    this.changePatterns = [this.changePattern0, this.changePattern1, this.changePattern2, this.changePattern3]; //tablica schematow zmian
+    this.canBeClicked = true;
+    this.cellActiveQuarter = [];
+    this.changePatterns = [this.changePattern0, this.changePattern1, this.changePattern2, this.changePattern3, this.changePattern4]; //tablica schematow zmian
     this.self = this;
     var quarterUser = $(".grid-quarter-user"); //pobieranie wszystkich czesci kwadratu uzytkownika
     var quarterResult = $(".grid-quarter-result");
     var temp = 0; //zmienna do poruszania sie po kolejnych elementac w quarterUser i quarterResult
     for (var i = 0; i < this.cells; i++) //ustawianie tablic plansz
     {
+        this.cellActiveQuarter[i]={
+            curr: -1,
+            prev: -1
+        };
         this.userField[i] = [];
         this.resultField[i] = [];
         for (var j = 0; j < this.quarters; j++) {
@@ -37,7 +43,7 @@ var Board = function (cells, quarters) {
     this.setChangePattern = function (number) { //ustawienie schematu zmian
         for (var i = 0; i < this.cells; i++) {
             for (var j = 0; j < this.quarters; j++) {//dla kazdej czesci kwadratu ustawiam zdarzenie onclick zalenie od wybranego schematu zmian
-                this.userField[i][j].html.onclick = $.proxy(this.changePatterns[number], this.userField[i][j], this.self);
+                this.userField[i][j].html.onclick = $.proxy(this.changePatterns[number[i]], this.userField[i][j], this.self);
             }
         }
     };
@@ -81,7 +87,6 @@ var Board = function (cells, quarters) {
             }
             window.onclick = function () {
             };//kasuje sprawdzanie plansz po kliknieciu
-
             $('.popup').fadeIn('slow');//wyswietlam przycisk wroc
         }
     };

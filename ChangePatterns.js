@@ -130,6 +130,58 @@ Board.prototype.changePattern3 = function (self) {
         }
     }
 };
+Board.prototype.changePattern4 = function(self)
+{
+    if(self.canBeClicked) {
+        self.canBeClicked = false;
+        var isFieldClicked = false;
+        for (var i = 0; i < 4; i++) {
+            if (self.userField[this.cell][i].state == "active") {
+                isFieldClicked = true;
+            }
+        }
+        if (isFieldClicked) {
+            var temp = self.cellActiveQuarter[this.cell].curr;
+            $(self.userField[this.cell][temp].html).fadeOut('fast', $.proxy(function () {
+                self.userField[this.cell][temp].html.style.backgroundColor = self.nonActiveColor;
+                self.userField[this.cell][temp].state = "nonActive";
+            }, this));
+            $(self.userField[this.cell][temp].html).fadeIn('fast', function () {
+                self.check(clickedLevel);
+                self.canBeClicked = true;
+            });
+            self.moves++;
+        }
+        else {
+            if (self.cellActiveQuarter[this.cell].curr == -1) {
+                self.cellActiveQuarter[this.cell].curr = 0;
+                $(self.userField[this.cell][0].html).fadeOut('fast', $.proxy(function () {
+                    self.userField[this.cell][0].html.style.backgroundColor = self.activeColor;
+                    self.userField[this.cell][0].state = "active";
+                }, this));
+                $(self.userField[this.cell][0].html).fadeIn('fast', function () {
+                    self.check(clickedLevel);
+                    self.canBeClicked = true;
+                });
+                self.moves++;
+            }
+            else {
+                self.cellActiveQuarter[this.cell].curr = (self.cellActiveQuarter[this.cell].curr + 1) % 4;
+                var temp = self.cellActiveQuarter[this.cell].curr;
+                $(self.userField[this.cell][temp].html).fadeOut('fast', $.proxy(function () {
+                    self.userField[this.cell][temp].html.style.backgroundColor = self.activeColor;
+                    self.userField[this.cell][temp].state = "active";
+                }, this));
+                $(self.userField[this.cell][temp].html).fadeIn('fast', function () {
+                    self.check(clickedLevel);
+                    self.canBeClicked = true;
+                });
+                self.moves++;
+            }
+        }
+        $('#moves').text('Moves: ' + self.moves);
+    }
+};
 Board.prototype.changePatternProtorype = function (self) {
     //if something
         $(self.userField[this.cell][this.quarter].html).fadeOut('fast', $.proxy(function() {
